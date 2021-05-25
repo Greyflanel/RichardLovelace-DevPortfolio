@@ -1,0 +1,19 @@
+{
+  "name": "richardlovelace-devportfolio",
+  "version": "1.0.0",
+  "description": "Developer Portfolio built with Html5, CSS3, JavaScript, GSAP, and Three.js. Bundled with Webpack 5.",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greyflanel/RichardLovelace-DevPortfolio.git"
+  },
+  "author": "Richard Lovelace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Greyflanel/RichardLovelace-DevPortfolio/issues"
+  },
+  "homepage": "https://github.com/Greyflanel/RichardLovelace-DevPortfolio#readme"
+}

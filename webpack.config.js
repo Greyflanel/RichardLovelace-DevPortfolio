@@ -9,7 +9,7 @@ module.exports = {
     index: "./src/index.js",
     three: "./src/three.js",
     nav: "./src/nav.js",
-    
+    gsap: "./src/gsap.js",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -21,7 +21,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "images/[name].[hash][ext]",
     clean: true,
@@ -32,6 +32,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(html)$/,
+        use: ["html-loader"],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -44,6 +48,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|mp4|glb|webp)$/i,
         type: "asset/resource",
+        
       },
     ],
   },

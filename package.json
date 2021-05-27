@@ -24,8 +24,10 @@
   "dependencies": {
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
+    "gsap": "^3.6.1",
     "html-loader": "^2.1.2",
     "lodash": "^4.17.21",
+    "three": "^0.129.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"

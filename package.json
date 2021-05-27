@@ -1,23 +1,46 @@
 {
   "name": "richardlovelace-devportfolio",
   "version": "1.0.0",
-  "description": "Developer Portfolio built with Html5, CSS3, JavaScript, GSAP, and Three.js. Bundled with Webpack 5.",
+  "description": "Web Developer Portfolio",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Greyflanel/RichardLovelace-DevPortfolio.git"
   },
-  "author": "Richard Lovelace",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Greyflanel/RichardLovelace-DevPortfolio/issues"
   },
   "homepage": "https://github.com/Greyflanel/RichardLovelace-DevPortfolio#readme",
   "dependencies": {
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "lodash": "^4.17.21",
+    "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "resource-hints-webpack-plugin": "^0.0.2",
+    "style-loader": "^2.0.0",
+    "webpack-dev-middleware": "^3.7.3",
+    "webpack-dev-server": "^3.11.2"
   }
 }

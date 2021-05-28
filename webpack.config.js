@@ -6,9 +6,8 @@ const ResourceHintWebpackPlugin = require("resource-hints-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
     three: "./src/three.js",
-    
+    index: "./src/index.js",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -45,7 +44,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|mp4|glb|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|mp4|gltf|webp)$/i,
         type: "asset/resource",
         
       },

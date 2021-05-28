@@ -1,4 +1,6 @@
-import myMoon from "./static/moon.glb";
+import "./styles/style.css";
+import "./styles/main.css";
+import myMoon from "./static/moon.gltf";
 import myStar from "./static/star.png";
 import "./styles/main.css";
 import * as THREE from "three";

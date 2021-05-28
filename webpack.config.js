@@ -8,8 +8,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     three: "./src/three.js",
-    nav: "./src/nav.js",
-    gsap: "./src/gsap.js",
+    
   },
   devtool: "inline-source-map",
   devServer: {

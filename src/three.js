@@ -1,6 +1,6 @@
-import "./styles/main.css";
-import myStar from "./static/star.png";
 import myMoon from "./static/moon.glb";
+import myStar from "./static/star.png";
+import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";

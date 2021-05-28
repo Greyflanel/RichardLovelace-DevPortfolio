@@ -46,10 +46,14 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|mp4|glb|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|mp4|webp)$/i,
         type: "asset/resource",
         
       },
+      {
+        test: /\.(glb|gltf)$/,
+        use: ["file-loader"]
+    }
     ],
   },
 };

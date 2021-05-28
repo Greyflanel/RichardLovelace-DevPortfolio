@@ -43,7 +43,7 @@ window.onload = function () {
     document.getElementById("knex-logo").src = Knex;
     document.getElementById("python-logo").src = Python;
     document.getElementById("my-avatar").src = My_Avatar;
-    document.getElementsByClassName("github-link").src = Github;
+    document.getElementsById("github-link").src = Github;
     document.getElementById("smokey").src = SmokeVid;
     document.getElementById("purple-border").src = PurpleBorder;
 

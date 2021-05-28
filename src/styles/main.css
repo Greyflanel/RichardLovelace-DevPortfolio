@@ -2,6 +2,7 @@ html,
 body {
   width: 100vw;
   overflow-x: hidden;
+  font-size: 75.5%;
 }
 
 section {
@@ -556,7 +557,7 @@ a:active {
   transition: 0.01s;
 }
 
-#link {
+#linked-in {
   color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
@@ -564,7 +565,20 @@ a:active {
   filter: contrast(1);
 }
 
-#link:hover {
+#linked-in:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.3s ease-out;
+}
+
+#links {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  text-shadow: 0 0 0.3px white, 0 0 0.5px white, 0 0 0.8px white, 0 4px 4px #140114, 0 0 6px #3b033b, 0 0 10px blueviolet;
+  filter: contrast(1);
+}
+
+#links:hover {
   transform: scale(1.2, 1.2);
   transition: 0.3s ease-out;
 }

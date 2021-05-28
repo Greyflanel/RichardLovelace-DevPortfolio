@@ -1,6 +1,10 @@
 import "./styles/style.css";
 import "./styles/main.css";
 import gsap from "gsap";
+import BlackClover from "./static/black-clover-pub-video.mp4";
+import MyPortfolioVideo from "./static/richardlovelace-portfolio.mp4";
+import Github from "./static/github.svg";
+import Github2 from "./static/github.svg";
 import NewLogo from "./static/new-logo-color.webp";
 import Html from "./static/html-logo.webp"
 import Css from "./static/css-logo.webp";
@@ -12,9 +16,11 @@ import Postgres from "./static/postgres-logo.webp";
 import Knex from "./static/knex-icon.webp";
 import Python from "./static/python-logo.webp"
 import My_Avatar from "./static/me.webp";
-import Github from "./static/github.svg";
 import SmokeVid from "./static/grape-smoke.mp4";
+import LinkedIn from "./static/linkedin.svg";
+import Github3 from "./static/github3.svg";
 import PurpleBorder from "./static/purpleborder.webp";
+import PurpleBorder2 from "./static/purpleborder2.webp";
 
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
@@ -32,6 +38,10 @@ window.addEventListener("resize", () => {
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 window.onload = function () {
+    document.getElementById("black-clover-vid").src = BlackClover;
+    document.getElementById("portfolio-vid").src = MyPortfolioVideo;
+    document.getElementById("github").src = Github;
+    document.getElementById("github2").src = Github2;
     document.getElementById("dev-logo").src = NewLogo;
     document.getElementById("html5-logo").src = Html;
     document.getElementById("css-logo").src = Css;
@@ -43,9 +53,11 @@ window.onload = function () {
     document.getElementById("knex-logo").src = Knex;
     document.getElementById("python-logo").src = Python;
     document.getElementById("my-avatar").src = My_Avatar;
-    document.getElementsById("github-link").src = Github;
     document.getElementById("smokey").src = SmokeVid;
+    document.getElementById("linked-in").src = LinkedIn;
+    document.getElementById("links").src = Github3;
     document.getElementById("purple-border").src = PurpleBorder;
+    document.getElementById("purple-border2").src = PurpleBorder2;
 
   function mediaqueryresponse(mql) {
     let tl = gsap.timeline({ repeat: -1 });

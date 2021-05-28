@@ -1,5 +1,7 @@
 import "./styles/style.css";
 import "./styles/main.css";
+import "./nav";
+import "./gsap";
 import gsap from "gsap";
 import BlackClover from "./static/black-clover-pub-video.mp4";
 import MyPortfolioVideo from "./static/richardlovelace-portfolio.mp4";

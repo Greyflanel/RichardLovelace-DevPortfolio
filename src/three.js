@@ -218,7 +218,7 @@ controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
 
 controls.update;
-console.log(controls);
+
 /**
  * Renderer
  */

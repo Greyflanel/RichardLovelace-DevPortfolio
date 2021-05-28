@@ -37,7 +37,7 @@ window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
-window.onload = function () {
+
     document.getElementById("black-clover-vid").src = BlackClover;
     document.getElementById("portfolio-vid").src = MyPortfolioVideo;
     document.getElementById("github").src = Github;
@@ -59,6 +59,8 @@ window.onload = function () {
     document.getElementById("purple-border").src = PurpleBorder;
     document.getElementById("purple-border2").src = PurpleBorder2;
 
+    
+window.onload = function () {
   function mediaqueryresponse(mql) {
     let tl = gsap.timeline({ repeat: -1 });
     let tl2 = gsap.timeline({ repeat: 0, delay: 0.5 });

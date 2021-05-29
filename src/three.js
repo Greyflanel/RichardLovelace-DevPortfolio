@@ -117,62 +117,6 @@ pointLight3.intensity = 3;
 
 scene.add(pointLight3);
 
-// const light3 = gui.addFolder("Light 3");
-
-// light3.add(pointLight3.position, "x").min(-8).max(8).step(0.01);
-// light3.add(pointLight3.position, "y").min(-8).max(8).step(0.01);
-// light3.add(pointLight3.position, "z").min(-3).max(3).step(0.01);
-// light3.add(pointLight3, "intensity").min(0).max(10).step(0.01);
-
-// const pointLight4 = new THREE.DirectionalLight(0x350061, 0.5);
-
-// pointLight4.position.set(10, 10, -10.5);
-// pointLight4.intensity = 1;
-
-// scene.add(pointLight4);
-
-// const light4 = gui.addFolder("Light 4");
-
-// light4.add(pointLight4.position, "x").min(-3).max(3).step(0.01);
-// light4.add(pointLight4.position, "y").min(-6).max(6).step(0.01);
-// light4.add(pointLight4.position, "z").min(-6).max(6).step(0.01);
-// light4.add(pointLight4, "intensity").min(0).max(10).step(0.01);
-
-// const light2Color = {
-//   color: 0x400061,
-// };
-
-// light2.addColor(light2Color, "color").onChange(() => {
-//   pointLight2.color.set(light1Color.color);
-// });
-
-// const light3Color = {
-//   color: 0xfffff,
-// };
-
-// light3.addColor(light3Color, "color").onChange(() => {
-//   pointLight3.color.set(light3Color.color);
-// });
-
-// const light4Color = {
-//   color: 0xfffff,
-// };
-
-// light4.addColor(light4Color, "color").onChange(() => {
-//   pointLight4.color.set(light4Color.color);
-// });
-
-// const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
-
-// scene.add(pointLightHelper);
-
-// const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
-
-// scene.add(pointLightHelper2);
-
-// const pointLightHelper4 = new THREE.PointLightHelper(pointLight4, 1);
-
-// scene.add(pointLightHelper4);
 
 /**
  * Sizes

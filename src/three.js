@@ -1,10 +1,11 @@
 import "./styles/style.css";
 import "./styles/main.css";
-import myMoon from "./static/moon.gltf";
+import myMoon from "./static/moonDraco.gltf";
 import myStar from "./static/star.png";
 import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import * as dat from "dat.gui";
 
@@ -65,24 +66,33 @@ scene.add(particlesMesh);
 
 // 3D Models
 
-let moon = myMoon;
-loader.load(
-  moon,
-  function (gltf) {
-    moon = gltf.scene;
-    moon.rotation.y = -0.3;
-    moon.rotation.x = -0.2;
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath(
+  "https://www.gstatic.com/draco/versioned/decoders/1.4.1/"
+);
 
-    moon.position.y = -0.13;
-    moon.position.x = -0.12;
+const gltf = new GLTFLoader();
+gltf.setDRACOLoader(dracoLoader);
 
-    gltf.scene.scale.set(1.15, 1.15, 1.15);
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
+// then you can load your glb file
+const glbPath = myMoon;
+gltf.load(glbPath, function (gltf) {
+  console.log(gltf);
+  scene.add(gltf.scene)
+},
+
+	// called as loading progresses
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
 );
 
 // Light 1

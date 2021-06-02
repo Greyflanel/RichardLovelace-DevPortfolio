@@ -22,7 +22,7 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "images/[name].[hash][ext]",
+    assetModuleFilename: "images/[name][ext]",
     clean: true,
     publicPath: "/",
   },

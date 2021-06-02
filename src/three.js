@@ -1,12 +1,15 @@
 import "./styles/style.css";
 import "./styles/main.css";
-import myMoon from "./static/moon.glb";
+import myMoon from "./static/moon-processed.glb";
+import "./static/moon-processed0.png";
+import "./static/moon-processed1.png";
+import "./static/moon-processed2.png";
+import "./static/moon-processed3.png";
 import myStar from "./static/star.png";
 import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import * as dat from "dat.gui";
 
@@ -48,9 +51,7 @@ particlesGeometry.setAttribute(
   new THREE.BufferAttribute(posArray, 3)
 );
 
-const material = new THREE.PointsMaterial({
-  size: 0.0,
-});
+
 
 const particlesMaterial = new THREE.PointsMaterial({
   size: 0.03,
@@ -73,10 +74,19 @@ dracoLoader.setDecoderPath(
 );
 
 const gltf = new GLTFLoader();
+gltf.setDRACOLoader(dracoLoader);
+
+const material = new THREE.PointsMaterial({
+ 
+});
+
+
 let moon = myMoon;
-gltf.setMeshoptDecoder(MeshoptDecoder);
+
 gltf.load(moon, function (gltf) {
+  
   moon = gltf.scene;
+  
   moon.rotation.y = -0.3;
   moon.rotation.x = -0.2;
 
@@ -84,7 +94,9 @@ gltf.load(moon, function (gltf) {
   moon.position.x = -0.12;
 
   gltf.scene.scale.set(1.15, 1.15, 1.15);
+
   scene.add(gltf.scene);
+
 },
 
 

@@ -1,10 +1,10 @@
 import "./styles/style.css";
 import "./styles/main.css";
-import myMoon from "./static/moonx-processed.gltf";
-import "./static/moonx-processed0.png";
-import "./static/moonx-processed1.png";
-import "./static/moonx-processed2.png";
-import "./static/moonx-processed3.png";
+import myMoon from "./static/moon.gltf";
+import "./static/moon0.png";
+import "./static/moon1.png";
+import "./static/moon2.png";
+import "./static/moon3.png";
 import myStar from "./static/star.png";
 import "./styles/main.css";
 import * as THREE from "three";

@@ -1,11 +1,10 @@
-import "./styles/style.css";
-import "./styles/main.css";
-import myMoon from "./static/moon.gltf";
-import "./static/moon0.png";
-import "./static/moon1.png";
-import "./static/moon2.png";
-import "./static/moon3.png";
+import myMoon from "./static/moonx-processed.gltf";
+import "./static/moonx-processed0.png";
+import "./static/moonx-processed1.png";
+import "./static/moonx-processed2.png";
+import "./static/moonx-processed3.png";
 import myStar from "./static/star.png";
+import "./styles/style.css";
 import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -15,6 +14,45 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 // Loading
 
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath(
+  "https://www.gstatic.com/draco/versioned/decoders/1.4.1/"
+);
+
+const gltf = new GLTFLoader();
+gltf.setDRACOLoader(dracoLoader);
+
+const material = new THREE.PointsMaterial({});
+
+let moon = myMoon;
+
+gltf.load(
+  moon,
+  function (gltf) {
+    moon = gltf.scene;
+
+    moon.rotation.y = -0.3;
+    moon.rotation.x = -0.2;
+
+    moon.position.y = -0.13;
+    moon.position.x = -0.12;
+
+    gltf.scene.scale.set(1.15, 1.15, 1.15);
+
+    scene.add(gltf.scene);
+  },
+
+  // then you can load your glb file
+
+  // called as loading progresses
+  function (xhr) {
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  },
+  // called when loading has errors
+  function (error) {
+    console.log("An error happened");
+  }
+);
 
 
 const textureLoader = new THREE.TextureLoader();
@@ -68,55 +106,7 @@ scene.add(particlesMesh);
 
 // 3D Models
 
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath(
-  "https://www.gstatic.com/draco/versioned/decoders/1.4.1/"
-);
 
-const gltf = new GLTFLoader();
-gltf.setDRACOLoader(dracoLoader);
-
-const material = new THREE.PointsMaterial({
- 
-});
-
-
-let moon = myMoon;
-
-gltf.load(moon, function (gltf) {
-  
-  moon = gltf.scene;
-  
-  moon.rotation.y = -0.3;
-  moon.rotation.x = -0.2;
-
-  moon.position.y = -0.13;
-  moon.position.x = -0.12;
-
-  gltf.scene.scale.set(1.15, 1.15, 1.15);
-
-  scene.add(gltf.scene);
-
-},
-
-
-// then you can load your glb file
-
-
-
-	// called as loading progresses
-	function ( xhr ) {
-
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-	},
-	// called when loading has errors
-	function ( error ) {
-
-		console.log( 'An error happened' );
-
-	}
-);
 
 // Light 1
 

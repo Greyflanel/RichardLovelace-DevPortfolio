@@ -18,6 +18,10 @@ body {
   height: 100vh;
 }
 
+.canvas-container {
+  background-color: black;
+}
+
 #first-section {
   background-color: black;
   width: 100%;

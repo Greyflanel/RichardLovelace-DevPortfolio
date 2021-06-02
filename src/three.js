@@ -1,17 +1,18 @@
 import "./styles/style.css";
 import "./styles/main.css";
-import myMoon from "./static/moonDraco.gltf";
+import myMoon from "./static/moon.glb";
 import myStar from "./static/star.png";
 import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import * as dat from "dat.gui";
 
 // Loading
 
-const loader = new GLTFLoader();
+
 
 const textureLoader = new THREE.TextureLoader();
 
@@ -72,14 +73,24 @@ dracoLoader.setDecoderPath(
 );
 
 const gltf = new GLTFLoader();
-gltf.setDRACOLoader(dracoLoader);
+let moon = myMoon;
+gltf.setMeshoptDecoder(MeshoptDecoder);
+gltf.load(moon, function (gltf) {
+  moon = gltf.scene;
+  moon.rotation.y = -0.3;
+  moon.rotation.x = -0.2;
+
+  moon.position.y = -0.13;
+  moon.position.x = -0.12;
+
+  gltf.scene.scale.set(1.15, 1.15, 1.15);
+  scene.add(gltf.scene);
+},
+
 
 // then you can load your glb file
-const glbPath = myMoon;
-gltf.load(glbPath, function (gltf) {
-  console.log(gltf);
-  scene.add(gltf.scene)
-},
+
+
 
 	// called as loading progresses
 	function ( xhr ) {

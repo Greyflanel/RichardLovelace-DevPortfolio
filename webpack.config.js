@@ -2,23 +2,22 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ResourceHintWebpackPlugin = require("resource-hints-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
+    three: "./src/three.js",
     index: "./src/index.js",
   },
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
   },
-  stats: "vebose",
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
     }),
-    new ResourceHintWebpackPlugin(),
+    new ResourceHintWebpackPlugin()
   ],
   output: {
     filename: "[name].[contenthash].bundle.js",
@@ -29,16 +28,6 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: "single",
-    removeAvailableModules: true,
-    minimizer: [
-      new TerserPlugin({
-        parallel: true,
-        terserOptions: {
-          compress: true,
-          // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
-        },
-      }),
-    ],
   },
   module: {
     rules: [
@@ -58,6 +47,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|mp4|gltf|glb|webp)$/i,
         type: "asset/resource",
+        
       },
     ],
   },

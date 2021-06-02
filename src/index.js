@@ -1,4 +1,3 @@
-import "./three";
 import "./nav";
 import "./gsap";
 import gsap from "gsap";

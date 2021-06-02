@@ -51,20 +51,20 @@
   ],
   "images": [
     {
-      "mimeType": "image/png",
-      "uri": "moon0.png"
+      "mimeType": "image/jpg",
+      "uri": "moon0.jpg"
     },
     {
-      "mimeType": "image/png",
-      "uri": "moon1.png"
+      "mimeType": "image/jpg",
+      "uri": "moon1.jpg"
     },
     {
-      "mimeType": "image/png",
-      "uri": "moon2.png"
+      "mimeType": "image/jpg",
+      "uri": "moon2.jpg"
     },
     {
-      "mimeType": "image/png",
-      "uri": "moon3.png"
+      "mimeType": "image/jpg",
+      "uri": "moon3.jpg"
     }
   ],
   "materials": [

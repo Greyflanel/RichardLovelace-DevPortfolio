@@ -1,3 +1,4 @@
+import(/* webpackPrefetch: true */ "./three");
 import "./nav";
 import "./gsap";
 import gsap from "gsap";
@@ -6,7 +7,7 @@ import MyPortfolioVideo from "./static/richardlovelace-portfolio.mp4";
 import Github from "./static/github.svg";
 import Github2 from "./static/github.svg";
 import NewLogo from "./static/new-logo-color.webp";
-import Html from "./static/html-logo.webp"
+import Html from "./static/html-logo.webp";
 import Css from "./static/css-logo.webp";
 import React from "./static/react-logo.webp";
 import Gsap from "./static/gsap-logo.webp";
@@ -14,7 +15,7 @@ import NodeJs from "./static/node-logo.webp";
 import Js from "./static/js-logo.webp";
 import Postgres from "./static/postgres-logo.webp";
 import Knex from "./static/knex-icon.webp";
-import Python from "./static/python-logo.webp"
+import Python from "./static/python-logo.webp";
 import My_Avatar from "./static/me.webp";
 import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
@@ -38,28 +39,27 @@ window.addEventListener("resize", () => {
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
-    document.getElementById("black-clover-vid").src = BlackClover;
-    document.getElementById("portfolio-vid").src = MyPortfolioVideo;
-    document.getElementById("github").src = Github;
-    document.getElementById("github2").src = Github2;
-    document.getElementById("dev-logo").src = NewLogo;
-    document.getElementById("html5-logo").src = Html;
-    document.getElementById("css-logo").src = Css;
-    document.getElementById("react-logo").src = React;
-    document.getElementById("gsap-logo").src = Gsap;
-    document.getElementById("node-logo").src = NodeJs;
-    document.getElementById("js-logo").src = Js;
-    document.getElementById("postgres-logo").src = Postgres;
-    document.getElementById("knex-logo").src = Knex;
-    document.getElementById("python-logo").src = Python;
-    document.getElementById("my-avatar").src = My_Avatar;
-    document.getElementById("smokey").src = SmokeVid;
-    document.getElementById("linked-in").src = LinkedIn;
-    document.getElementById("links").src = Github3;
-    document.getElementById("purple-border").src = PurpleBorder;
-    document.getElementById("purple-border2").src = PurpleBorder2;
+document.getElementById("black-clover-vid").src = BlackClover;
+document.getElementById("portfolio-vid").src = MyPortfolioVideo;
+document.getElementById("github").src = Github;
+document.getElementById("github2").src = Github2;
+document.getElementById("dev-logo").src = NewLogo;
+document.getElementById("html5-logo").src = Html;
+document.getElementById("css-logo").src = Css;
+document.getElementById("react-logo").src = React;
+document.getElementById("gsap-logo").src = Gsap;
+document.getElementById("node-logo").src = NodeJs;
+document.getElementById("js-logo").src = Js;
+document.getElementById("postgres-logo").src = Postgres;
+document.getElementById("knex-logo").src = Knex;
+document.getElementById("python-logo").src = Python;
+document.getElementById("my-avatar").src = My_Avatar;
+document.getElementById("smokey").src = SmokeVid;
+document.getElementById("linked-in").src = LinkedIn;
+document.getElementById("links").src = Github3;
+document.getElementById("purple-border").src = PurpleBorder;
+document.getElementById("purple-border2").src = PurpleBorder2;
 
-    
 window.onload = function () {
   function mediaqueryresponse(mql) {
     let tl = gsap.timeline({ repeat: -1 });
@@ -336,4 +336,3 @@ window.onload = function () {
     mqls[i].addEventListener(mediaqueryresponse, {});
   }
 };
-

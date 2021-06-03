@@ -6,7 +6,6 @@ const ResourceHintWebpackPlugin = require("resource-hints-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    three: "./src/three.js",
     index: "./src/index.js",
   },
   devtool: "inline-source-map",
@@ -17,7 +16,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
     }),
-    new ResourceHintWebpackPlugin()
+    new MiniCssExtractPlugin(),
+    new ResourceHintWebpackPlugin(),
   ],
   output: {
     filename: "[name].[contenthash].bundle.js",
@@ -36,18 +36,17 @@ module.exports = {
         use: ["html-loader"],
       },
       {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.(png|svg|jpg|jpeg|mp4|gltf|glb|webp)$/i,
         type: "asset/resource",
-        
       },
     ],
   },

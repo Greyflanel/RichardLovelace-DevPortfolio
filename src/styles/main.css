@@ -8,9 +8,7 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: "Poppins";
-  width: 100vw;
-  
+  font-size: 75.5%;
 }
 .webgl {
   position: relative;

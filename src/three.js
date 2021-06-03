@@ -22,8 +22,6 @@ dracoLoader.setDecoderPath(
 const gltf = new GLTFLoader();
 gltf.setDRACOLoader(dracoLoader);
 
-const material = new THREE.PointsMaterial({});
-
 let moon = myMoon;
 
 gltf.load(
@@ -71,7 +69,7 @@ const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
 // Objects
-const geometry = new THREE.SphereGeometry(0.001, 64, 64);
+
 
 const particlesGeometry = new THREE.BufferGeometry();
 
@@ -110,11 +108,11 @@ scene.add(particlesMesh);
 
 // Light 1
 
-// const pointLight1 = new THREE.PointLight(0x190039, 0.5);
-// pointLight1.position.x = 2;
-// pointLight1.position.y = -1;
-// pointLight1.position.z = -1;
-// scene.add(pointLight1);
+const pointLight1 = new THREE.PointLight(0x190039, 0.5);
+pointLight1.position.x = 2;
+pointLight1.position.y = -1;
+pointLight1.position.z = -1;
+scene.add(pointLight1);
 
 // // Light 2
 
@@ -194,6 +192,7 @@ controls.update;
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   alpha: true,
+  antialias: true,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -219,11 +218,6 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  // Update objects
-  // sphere.rotation.y = 0.5 * elapsedTime;
-  // sphere.rotation.x = 0.5 * elapsedTime;
-  // sphere.rotation.z = 0.5 * elapsedTime;
-
   particlesMesh.rotation.x = mouseX * (elapsedTime * -0.0000022);
   particlesMesh.rotation.y = mouseY * (elapsedTime * -0.0000023);
 
@@ -238,3 +232,75 @@ const tick = () => {
 };
 
 tick();
+
+
+// tl.set(".container", {
+  //   visibility: "visible",
+  //   autoAlpha: 1,
+
+  //   xPercent: -50,
+  //   yPercent: -50,
+  //   x: "35%",
+  //   y: "0%",
+
+  // });
+
+  // if (mqls[0].matches) {
+
+  //   tl.to(".container", {
+
+  //     x: "+=5%",
+  //     y: "-=25%",
+  //     duration: 20,
+  //     ease: "linear",
+  //   })
+  //     .to(".container", {
+  //       x: "+=45%",
+  //       y: "+=30%",
+  //       duration: 45,
+  //       ease: "linear",
+  //       delay: 9999999999999999999999999999,
+  //     })
+  //     .to(".container", {
+  //       x: "-=45%",
+  //       y: "+=20%",
+  //       duration: 45,
+  //       ease: "linear",
+  //     })
+  //     .to(".container", {
+  //       x: "-=45%",
+  //       y: "-=20%",
+  //       duration: 45,
+  //       ease: "linear",
+  //     });
+  // } else if (mqls[1].matches) {
+  //   tl.set(".container", {
+  //     x: "+=10%",
+  //     delay: 0
+  //   });
+  //   tl.to(".container", {
+  //     x: "+=38%",
+  //     y: "-=13%",
+  //     duration: 30,
+  //     ease: "linear",
+  //   })
+  //     .to(".container", {
+  //       x: "+=38%",
+  //       y: "+=13%",
+  //       duration: 30,
+  //       ease: "linear",
+  //     })
+  //     .to(".container", {
+  //       x: "-=38%",
+  //       y: "+=13%",
+  //       duration: 30,
+  //       ease: "linear",
+  //     })
+  //     .to(".container", {
+  //       x: "-=38%",
+  //       y: "-=13%",
+  //       duration: 30,
+  //       ease: "linear",
+  //     });
+
+  // }

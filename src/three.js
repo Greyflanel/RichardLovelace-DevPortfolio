@@ -29,8 +29,8 @@ gltf.load(
   function (gltf) {
     moon = gltf.scene;
 
-    moon.rotation.y = -0.3;
-    moon.rotation.x = -0.2;
+    moon.rotation.y = -0.1;
+    moon.rotation.x = -0.1;
 
     moon.position.y = -0.13;
     moon.position.x = -0.12;
@@ -108,18 +108,17 @@ scene.add(particlesMesh);
 
 // Light 1
 
-const pointLight1 = new THREE.PointLight(0x190039, 0.5);
-pointLight1.position.x = 2;
-pointLight1.position.y = -1;
-pointLight1.position.z = -1;
+const pointLight1 = new THREE.DirectionalLight(0x68228B	, 0.5);
+pointLight1.position.set(-1, 5, 4);
+pointLight1.intensity = 2;
 scene.add(pointLight1);
 
 // // Light 2
 
-const pointLight2 = new THREE.PointLight(0x00000);
+const pointLight2 = new THREE.DirectionalLight(0x68228B	);
 
-pointLight2.position.set(1, -2, 1.16);
-pointLight2.intensity = 3.9;
+pointLight2.position.set(1, -2, 1);
+pointLight2.intensity = 2;
 
 scene.add(pointLight2);
 
@@ -131,10 +130,10 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.PointLight(0x673a7c);
+const pointLight3 = new THREE.DirectionalLight(0x68228B	);
 
-pointLight3.position.set(-8, 5, 8);
-pointLight3.intensity = 3;
+pointLight3.position.set(-10, 5, 8);
+pointLight3.intensity = 2;
 
 scene.add(pointLight3);
 

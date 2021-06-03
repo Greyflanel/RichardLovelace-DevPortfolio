@@ -108,19 +108,19 @@ scene.add(particlesMesh);
 
 // Light 1
 
-const pointLight1 = new THREE.DirectionalLight(0x68228B	, 0.5);
-pointLight1.position.set(-1, 5, 4);
-pointLight1.intensity = 2;
-scene.add(pointLight1);
+// const pointLight1 = new THREE.DirectionalLight(0x68228B	, 0.5);
+// pointLight1.position.set(-1, 5, 4);
+// pointLight1.intensity = 2;
+// scene.add(pointLight1);
 
 // // Light 2
 
-const pointLight2 = new THREE.DirectionalLight(0x68228B	);
+// const pointLight2 = new THREE.DirectionalLight(0x68228B	);
 
-pointLight2.position.set(1, -2, 1);
-pointLight2.intensity = 2;
+// pointLight2.position.set(1, -2, 1);
+// pointLight2.intensity = 2;
 
-scene.add(pointLight2);
+// scene.add(pointLight2);
 
 // const light2 = gui.addFolder("Light 2");
 
@@ -130,7 +130,7 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.DirectionalLight(0x68228B	);
+const pointLight3 = new THREE.AmbientLight(0x68228B	);
 
 pointLight3.position.set(-10, 5, 8);
 pointLight3.intensity = 2;

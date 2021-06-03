@@ -1,4 +1,3 @@
-import(/* webpackPrefetch: true */ "./three");
 import "./nav";
 import "./gsap";
 import gsap from "gsap";

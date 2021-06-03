@@ -6,6 +6,7 @@ const ResourceHintWebpackPlugin = require("resource-hints-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
+    three: "./src/three.js",
     index: "./src/index.js",
   },
   devtool: "inline-source-map",

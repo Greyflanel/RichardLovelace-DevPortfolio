@@ -1,7 +1,7 @@
-import myMoon from "./static/moonx-processed.gltf";
 import "./static/moonx-processed0.png";
-import "./static/moonx-processed1.png";
 import "./static/moonx-processed2.png";
+import myMoon from "./static/moonx-processed.gltf";
+import "./static/moonx-processed1.png";
 import "./static/moonx-processed3.png";
 import myStar from "./static/star.png";
 import "./styles/style.css";

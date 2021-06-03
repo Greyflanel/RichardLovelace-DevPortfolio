@@ -1,3 +1,4 @@
+import "./styles/style.css";
 import "./nav";
 import "./gsap";
 import gsap from "gsap";

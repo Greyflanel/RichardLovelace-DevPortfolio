@@ -1,10 +1,11 @@
+import "./styles/style.css";
 import "./static/moonx-processed0.png";
 import "./static/moonx-processed2.png";
 import myMoon from "./static/moonx-processed.gltf";
 import "./static/moonx-processed1.png";
 import "./static/moonx-processed3.png";
 import myStar from "./static/star.png";
-import "./styles/style.css";
+
 import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";

@@ -38,26 +38,7 @@ window.addEventListener("resize", () => {
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
-document.getElementById("black-clover-vid").src = BlackClover;
-document.getElementById("portfolio-vid").src = MyPortfolioVideo;
-document.getElementById("github").src = Github;
-document.getElementById("github2").src = Github2;
-document.getElementById("dev-logo").src = NewLogo;
-document.getElementById("html5-logo").src = Html;
-document.getElementById("css-logo").src = Css;
-document.getElementById("react-logo").src = React;
-document.getElementById("gsap-logo").src = Gsap;
-document.getElementById("node-logo").src = NodeJs;
-document.getElementById("js-logo").src = Js;
-document.getElementById("postgres-logo").src = Postgres;
-document.getElementById("knex-logo").src = Knex;
-document.getElementById("python-logo").src = Python;
-document.getElementById("my-avatar").src = My_Avatar;
-document.getElementById("smokey").src = SmokeVid;
-document.getElementById("linked-in").src = LinkedIn;
-document.getElementById("links").src = Github3;
-document.getElementById("purple-border").src = PurpleBorder;
-document.getElementById("purple-border2").src = PurpleBorder2;
+
 
 window.onload = function () {
   function mediaqueryresponse(mql) {
@@ -103,18 +84,40 @@ window.onload = function () {
           stagger: {
             from: "edges",
             each: 0.04,
-            repeat: 9,
+            repeat: 8,
             yoyo: true,
           },
         },
         "-=0.5"
       )
       .to(letters, {
+        delay: 0.5,
         
-        color: "whitesmoke",
-        
-      }, "-=3.5");
+        filter: "brightness(100%)",
+        duration: 4,
+      });
   }
+
+document.getElementById("black-clover-vid").src = BlackClover;
+document.getElementById("portfolio-vid").src = MyPortfolioVideo;
+document.getElementById("github").src = Github;
+document.getElementById("github2").src = Github2;
+document.getElementById("dev-logo").src = NewLogo;
+document.getElementById("html5-logo").src = Html;
+document.getElementById("css-logo").src = Css;
+document.getElementById("react-logo").src = React;
+document.getElementById("gsap-logo").src = Gsap;
+document.getElementById("node-logo").src = NodeJs;
+document.getElementById("js-logo").src = Js;
+document.getElementById("postgres-logo").src = Postgres;
+document.getElementById("knex-logo").src = Knex;
+document.getElementById("python-logo").src = Python;
+document.getElementById("my-avatar").src = My_Avatar;
+document.getElementById("smokey").src = SmokeVid;
+document.getElementById("linked-in").src = LinkedIn;
+document.getElementById("links").src = Github3;
+document.getElementById("purple-border").src = PurpleBorder;
+document.getElementById("purple-border2").src = PurpleBorder2;
 
   // tl.set(".container", {
   //   visibility: "visible",

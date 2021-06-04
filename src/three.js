@@ -217,8 +217,8 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.0000022);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.0000023);
+  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000002);
+  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.0000021);
 
   // Update Orbital Controls
   controls.update();

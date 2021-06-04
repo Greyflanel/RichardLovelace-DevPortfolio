@@ -47,6 +47,7 @@
   background: #260033;
   border-radius: 0.5rem;
   box-shadow: 5px 10px 30px 8px #46324648;
+  font-size: 75%;
 }
 
 @media (max-width: 1680px) {

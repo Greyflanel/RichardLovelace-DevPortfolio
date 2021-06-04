@@ -103,15 +103,17 @@ window.onload = function () {
           stagger: {
             from: "edges",
             each: 0.04,
-            repeat: 7,
+            repeat: 9,
             yoyo: true,
           },
         },
         "-=0.5"
       )
       .to(letters, {
-        filter: "brightness(100%)",
-      });
+        
+        color: "whitesmoke",
+        
+      }, "-=3.5");
   }
 
   // tl.set(".container", {
@@ -183,151 +185,7 @@ window.onload = function () {
   //       ease: "linear",
   //     });
 
-  // } else if (mqls[2].matches) {
-  //   tl.set(".container", {
-
-  //     x: "+=10%",
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=34%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[3].matches) {
-  //   tl.set(".container", {
-  //     x: "+=10%",
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=34%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[4].matches) {
-  //   tl.set(".container", {
-  //     x: "+=10%",
-
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=34%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[5].matches) {
-  //   tl.set(".container", {
-  //     x: "+=15%",
-
-  //   });
-  //   tl.to(".container", {
-
-  //     x: "+=34%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[6].matches) {
-  //   tl.set(".container", {
-
-  //     x: "+=13%",
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=34%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=34%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
+  // } 
   // }
 
   for (let i = 0; i < mqls.length; i++) {

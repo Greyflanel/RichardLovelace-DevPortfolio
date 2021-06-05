@@ -194,7 +194,7 @@ let mouseY = -1;
 
 function animatedParticles(event) {
   mouseY = event.clientY;
-  mouseX = event.clientX;
+  // mouseX = event.clientX;
 }
 
 /**

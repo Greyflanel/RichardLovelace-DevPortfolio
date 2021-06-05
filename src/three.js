@@ -1,8 +1,8 @@
-import "./static/moonx-processed0.png";
-import "./static/moonx-processed2.png";
-import "./static/moonx-processed1.png";
-import "./static/moonx-processed3.png";
-import myMoon from "./static/moonx-processed.gltf";
+import "./moon0.webp";
+import "./moon2.webp";
+import "./moon1.webp";
+import "./moon3.webp";
+import myMoon from "./moon.gltf";
 import myStar from "./static/star.png";
 import myZero from "./static/zero.png";
 import myOne from "./static/one.png";
@@ -46,6 +46,7 @@ gltf.load(
 
   // called as loading progresses
   function (xhr) {
+    console.log(xhr.loaded)
     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
   },
   // called when loading has errors

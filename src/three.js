@@ -1,11 +1,10 @@
-import "./moon0.webp";
-import "./moon2.webp";
-import "./moon1.webp";
-import "./moon3.webp";
-import myMoon from "./moon.gltf";
-import myStar from "./static/star.png";
-import myZero from "./static/zero.png";
-import myOne from "./static/one.png";
+import "./static/moon0.webp";
+import "./static/moon2.webp";
+import "./static/moon1.webp";
+import "./static/moon3.webp";
+import myMoon from "./static/moon.gltf";
+import myZero from "./static/zero.webp";
+import myOne from "./static/one.webp";
 import "./styles/style.css";
 import "./styles/main.css";
 import * as THREE from "three";

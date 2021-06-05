@@ -57,7 +57,7 @@ const scene = new THREE.Scene();
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 16000;
+const particlesCount = 13000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
@@ -90,10 +90,8 @@ const particlesMaterial1 = new THREE.PointsMaterial({
 // // Mesh
 
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-scene.add(particlesMesh);
-
 const particlesMesh1 = new THREE.Points(particlesGeometry, particlesMaterial1);
-scene.add(particlesMesh1);
+scene.add(particlesMesh, particlesMesh1);
 
 // 3D Models
 

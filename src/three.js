@@ -4,6 +4,8 @@ import "./static/moonx-processed1.png";
 import "./static/moonx-processed3.png";
 import myMoon from "./static/moonx-processed.gltf";
 import myStar from "./static/star.png";
+import myZero from "./static/zero.png";
+import myOne from "./static/one.png";
 import "./styles/style.css";
 import "./styles/main.css";
 import * as THREE from "three";
@@ -54,8 +56,9 @@ gltf.load(
 
 
 const textureLoader = new THREE.TextureLoader();
-
-const star = textureLoader.load(myStar);
+const textureLoader1 = new THREE.TextureLoader();
+const zero = textureLoader.load(myZero);
+const one = textureLoader1.load(myOne);
 
 // const normalTexture = textureLoader.load("");
 
@@ -73,7 +76,7 @@ const scene = new THREE.Scene();
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 15000;
+const particlesCount = 18000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
@@ -90,8 +93,16 @@ particlesGeometry.setAttribute(
 
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.03,
-  map: star,
+  size: 0.006,
+  map: (zero),
+  transparent: true,
+  color: "#ffffff",
+  blending: THREE.AdditiveBlending,
+});
+
+const particlesMaterial1 = new THREE.PointsMaterial({
+  size: 0.006,
+  map: one,
   transparent: true,
   color: "#ffffff",
   blending: THREE.AdditiveBlending,
@@ -102,32 +113,10 @@ const particlesMaterial = new THREE.PointsMaterial({
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
 scene.add(particlesMesh);
 
+const particlesMesh1 = new THREE.Points(particlesGeometry, particlesMaterial1);
+scene.add(particlesMesh1);
+
 // 3D Models
-
-
-
-// Light 1
-
-// const pointLight1 = new THREE.DirectionalLight(0x68228B	, 0.5);
-// pointLight1.position.set(-1, 5, 4);
-// pointLight1.intensity = 2;
-// scene.add(pointLight1);
-
-// // Light 2
-
-// const pointLight2 = new THREE.DirectionalLight(0x68228B	);
-
-// pointLight2.position.set(1, -2, 1);
-// pointLight2.intensity = 2;
-
-// scene.add(pointLight2);
-
-// const light2 = gui.addFolder("Light 2");
-
-// light2.add(pointLight2.position, "x").min(-3).max(3).step(0.01);
-// light2.add(pointLight2.position, "y").min(-6).max(6).step(0.01);
-// light2.add(pointLight2.position, "z").min(-6).max(6).step(0.01);
-// light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
 const pointLight3 = new THREE.AmbientLight(0x68228B	);
@@ -180,7 +169,7 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
 controls.enableZoom = false;
-controls.autoRotateSpeed = 0.15;
+controls.autoRotateSpeed = 0.17;
 controls.enablePan = false;
 
 controls.update;
@@ -200,8 +189,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 document.addEventListener("mousemove", animatedParticles);
 
-let mouseX = 0.5;
-let mouseY = -0.5;
+let mouseX = 1;
+let mouseY = -1;
 
 function animatedParticles(event) {
   mouseY = event.clientY;
@@ -217,8 +206,8 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000002);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.0000021);
+  particlesMesh.rotation.x = mouseX * (elapsedTime * 0.000025);
+  particlesMesh.rotation.y = mouseY * (elapsedTime * 0.000024);
 
   // Update Orbital Controls
   controls.update();

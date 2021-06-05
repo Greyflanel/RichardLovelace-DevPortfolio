@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Greyflanel/RichardLovelace-DevPortfolio#readme",
   "dependencies": {
     "file-loader": "^6.2.0",
+    "gltf-pipeline": "^3.0.2",
     "gsap": "^3.6.1",
     "html-loader": "^2.1.2",
     "three": "^0.129.0",

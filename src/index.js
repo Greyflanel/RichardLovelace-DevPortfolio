@@ -42,12 +42,9 @@ window.addEventListener("resize", () => {
 
 window.onload = function () {
   function mediaqueryresponse(mql) {
-    let tl = gsap.timeline({ repeat: -1 });
     let tl2 = gsap.timeline({ repeat: 0, delay: 0.5 });
     let tl3 = gsap.timeline({ repeat: 0 });
-    let tl4 = gsap.timeline({ repeat: 0 });
-    let tl5 = gsap.timeline({ repeat: 0 });
-
+    
     let letters = document.querySelectorAll(".letter");
 
     tl3
@@ -91,7 +88,7 @@ window.onload = function () {
         "-=0.5"
       )
       .to(letters, {
-        delay: 0.5,
+        delay: 0.2,
         
         filter: "brightness(100%)",
         duration: 4,
@@ -119,77 +116,6 @@ document.getElementById("links").src = Github3;
 document.getElementById("purple-border").src = PurpleBorder;
 document.getElementById("purple-border2").src = PurpleBorder2;
 
-  // tl.set(".container", {
-  //   visibility: "visible",
-  //   autoAlpha: 1,
-
-  //   xPercent: -50,
-  //   yPercent: -50,
-  //   x: "35%",
-  //   y: "0%",
-
-  // });
-
-  // if (mqls[0].matches) {
-
-  //   tl.to(".container", {
-
-  //     x: "+=5%",
-  //     y: "-=25%",
-  //     duration: 20,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=45%",
-  //       y: "+=30%",
-  //       duration: 45,
-  //       ease: "linear",
-  //       delay: 9999999999999999999999999999,
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "+=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "-=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[1].matches) {
-  //   tl.set(".container", {
-  //     x: "+=10%",
-  //     delay: 0
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=38%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-
-  // } 
-  // }
 
   for (let i = 0; i < mqls.length; i++) {
     mediaqueryresponse(mqls[i]);

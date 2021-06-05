@@ -15,6 +15,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 // Loading
 
+const textureLoader = new THREE.TextureLoader();
+const textureLoader1 = new THREE.TextureLoader();
+const zero = textureLoader.load(myZero);
+const one = textureLoader1.load(myOne);
+
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath(
   "https://www.gstatic.com/draco/versioned/decoders/1.4.1/"
@@ -55,10 +60,6 @@ gltf.load(
 );
 
 
-const textureLoader = new THREE.TextureLoader();
-const textureLoader1 = new THREE.TextureLoader();
-const zero = textureLoader.load(myZero);
-const one = textureLoader1.load(myOne);
 
 // const normalTexture = textureLoader.load("");
 

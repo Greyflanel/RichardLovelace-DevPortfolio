@@ -29,6 +29,8 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: "single",
+    usedExports: true,
+
   },
   module: {
     rules: [

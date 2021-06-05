@@ -215,7 +215,7 @@ a:active {
 
 .content {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   right: 15%;
   text-align: center;
   z-index: 12;
@@ -309,6 +309,22 @@ a:active {
   .content-title {
     font-size: 1.8rem;
   }
+}
+
+.love-of-code {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  z-index: 500;
+  color: whitesmoke;
+}
+
+.love-of-code h2 {
+  font-size: 4rem;
+}
+
+.love-of-code h3 {
+  font-size: 3rem;
 }
 
 .second-section-title {

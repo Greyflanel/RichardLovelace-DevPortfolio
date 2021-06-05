@@ -1,3 +1,5 @@
+import "./styles/style.css";
+import "./styles/main.css";
 import "./static/moon0.webp";
 import "./static/moon2.webp";
 import "./static/moon1.webp";
@@ -5,8 +7,6 @@ import "./static/moon3.webp";
 import myMoon from "./static/moon.gltf";
 import myZero from "./static/zero.webp";
 import myOne from "./static/one.webp";
-import "./styles/style.css";
-import "./styles/main.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
@@ -38,33 +38,14 @@ gltf.load(
     moon.rotation.y = -0.1;
     moon.rotation.x = -0.1;
 
-    moon.position.y = -0.13;
+    moon.position.y = -0.07;
     moon.position.x = -0.12;
 
-    gltf.scene.scale.set(1.15, 1.15, 1.15);
+    gltf.scene.scale.set(1.14, 1.14, 1.14);
 
     scene.add(gltf.scene);
-  },
-
-  // then you can load your glb file
-
-  // called as loading progresses
-  function (xhr) {
-    console.log(xhr.loaded)
-    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-  },
-  // called when loading has errors
-  function (error) {
-    console.log("An error happened");
   }
 );
-
-
-
-// const normalTexture = textureLoader.load("");
-
-// Debug
-//  const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -74,10 +55,9 @@ const scene = new THREE.Scene();
 
 // Objects
 
-
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 18000;
+const particlesCount = 16000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
@@ -91,11 +71,9 @@ particlesGeometry.setAttribute(
   new THREE.BufferAttribute(posArray, 3)
 );
 
-
-
 const particlesMaterial = new THREE.PointsMaterial({
   size: 0.006,
-  map: (zero),
+  map: zero,
   transparent: true,
   color: "#ffffff",
   blending: THREE.AdditiveBlending,
@@ -120,13 +98,12 @@ scene.add(particlesMesh1);
 // 3D Models
 
 // Light 3
-const pointLight3 = new THREE.AmbientLight(0x68228B	);
+const pointLight3 = new THREE.AmbientLight(0x68228b);
 
 pointLight3.position.set(-10, 5, 8);
 pointLight3.intensity = 2;
 
 scene.add(pointLight3);
-
 
 /**
  * Sizes
@@ -222,74 +199,73 @@ const tick = () => {
 
 tick();
 
-
 // tl.set(".container", {
-  //   visibility: "visible",
-  //   autoAlpha: 1,
+//   visibility: "visible",
+//   autoAlpha: 1,
 
-  //   xPercent: -50,
-  //   yPercent: -50,
-  //   x: "35%",
-  //   y: "0%",
+//   xPercent: -50,
+//   yPercent: -50,
+//   x: "35%",
+//   y: "0%",
 
-  // });
+// });
 
-  // if (mqls[0].matches) {
+// if (mqls[0].matches) {
 
-  //   tl.to(".container", {
+//   tl.to(".container", {
 
-  //     x: "+=5%",
-  //     y: "-=25%",
-  //     duration: 20,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=45%",
-  //       y: "+=30%",
-  //       duration: 45,
-  //       ease: "linear",
-  //       delay: 9999999999999999999999999999,
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "+=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "-=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[1].matches) {
-  //   tl.set(".container", {
-  //     x: "+=10%",
-  //     delay: 0
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=38%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
+//     x: "+=5%",
+//     y: "-=25%",
+//     duration: 20,
+//     ease: "linear",
+//   })
+//     .to(".container", {
+//       x: "+=45%",
+//       y: "+=30%",
+//       duration: 45,
+//       ease: "linear",
+//       delay: 9999999999999999999999999999,
+//     })
+//     .to(".container", {
+//       x: "-=45%",
+//       y: "+=20%",
+//       duration: 45,
+//       ease: "linear",
+//     })
+//     .to(".container", {
+//       x: "-=45%",
+//       y: "-=20%",
+//       duration: 45,
+//       ease: "linear",
+//     });
+// } else if (mqls[1].matches) {
+//   tl.set(".container", {
+//     x: "+=10%",
+//     delay: 0
+//   });
+//   tl.to(".container", {
+//     x: "+=38%",
+//     y: "-=13%",
+//     duration: 30,
+//     ease: "linear",
+//   })
+//     .to(".container", {
+//       x: "+=38%",
+//       y: "+=13%",
+//       duration: 30,
+//       ease: "linear",
+//     })
+//     .to(".container", {
+//       x: "-=38%",
+//       y: "+=13%",
+//       duration: 30,
+//       ease: "linear",
+//     })
+//     .to(".container", {
+//       x: "-=38%",
+//       y: "-=13%",
+//       duration: 30,
+//       ease: "linear",
+//     });
 
-  // }
+// }

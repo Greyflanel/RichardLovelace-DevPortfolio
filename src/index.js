@@ -19,8 +19,7 @@ import My_Avatar from "./static/me.webp";
 import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
 import Github3 from "./static/github3.svg";
-import PurpleBorder from "./static/purpleborder.webp";
-import PurpleBorder2 from "./static/purpleborder2.webp";
+
 
 
 var mqls = [

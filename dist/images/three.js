@@ -48,17 +48,17 @@ const canvas = document.querySelector("canvas.webgl"); // Scene
 const scene = new THREE.Scene(); // Objects
 
 const particlesGeometry = new THREE.BufferGeometry();
-const particlesCount = 10000;
+const particlesCount = 9000;
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-  posArray[i] = (Math.random() - 0.5) * 6;
+  posArray[i] = (Math.random() - 0.5) * 5.5;
 } // // Materials
 
 
 particlesGeometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.015,
+  size: 0.014,
   map: zero,
   transparent: true,
   color: "#ffffff",
@@ -148,7 +148,7 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
   particlesMesh.rotation.x = mouseX * (Math.PI * 0.000025);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * 0.000026); // Update Orbital Controls
+  particlesMesh.rotation.y = mouseY * (Math.PI * 0.000046); // Update Orbital Controls
 
   controls.update(); // Render
 

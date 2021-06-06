@@ -113,9 +113,6 @@ document.getElementById("my-avatar").src = My_Avatar;
 document.getElementById("smokey").src = SmokeVid;
 document.getElementById("linked-in").src = LinkedIn;
 document.getElementById("links").src = Github3;
-document.getElementById("purple-border").src = PurpleBorder;
-document.getElementById("purple-border2").src = PurpleBorder2;
-
 
   for (let i = 0; i < mqls.length; i++) {
     mediaqueryresponse(mqls[i]);

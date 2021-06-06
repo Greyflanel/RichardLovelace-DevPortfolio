@@ -3,8 +3,8 @@ import "./static/moon2.webp";
 import "./static/moon1.webp";
 import "./static/moon3.webp";
 import myMoon from "./static/moon.gltf";
-import myZero from "./static/zero.webp";
-import myOne from "./static/one.webp";
+import myZero from "./static/zero.bak.webp";
+import myOne from "./static/one.bak.webp";
 import "./styles/style.css";
 import "./styles/main.css";
 import * as THREE from "three";
@@ -38,10 +38,10 @@ gltf.load(
     moon.rotation.y = -0.1;
     moon.rotation.x = -0.1;
 
-    moon.position.y = -0.13;
+    moon.position.y = -0.03;
     moon.position.x = -0.12;
 
-    gltf.scene.scale.set(1.15, 1.15, 1.15);
+    gltf.scene.scale.set(1.14, 1.14, 1.14);
 
     scene.add(gltf.scene);
   },
@@ -50,7 +50,7 @@ gltf.load(
 
   // called as loading progresses
   function (xhr) {
-    console.log(xhr.loaded)
+    
     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
   },
   // called when loading has errors
@@ -77,12 +77,12 @@ const scene = new THREE.Scene();
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 9000;
+const particlesCount = 7000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-  posArray[i] = (Math.random() - 0.5) * 5.5;
+  posArray[i] = (Math.random() - 0.5) * 7;
 }
 // // Materials
 
@@ -94,7 +94,8 @@ particlesGeometry.setAttribute(
 
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.014,
+  size: 0.012,
+  sizeAttenuation: true,
   map: zero,
   transparent: true,
   color: "#ffffff",
@@ -102,7 +103,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 
 const particlesMaterial1 = new THREE.PointsMaterial({
-  size: 0.014,
+  size: 0.012,
   map: one,
   transparent: true,
   color: "#ffffff",

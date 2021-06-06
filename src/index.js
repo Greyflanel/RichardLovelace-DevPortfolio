@@ -22,6 +22,7 @@ import Github3 from "./static/github3.svg";
 import PurpleBorder from "./static/purpleborder.webp";
 import PurpleBorder2 from "./static/purpleborder2.webp";
 
+
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
   window.matchMedia("(min-width: 1000px)"),

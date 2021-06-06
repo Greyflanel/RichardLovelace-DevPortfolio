@@ -125,37 +125,37 @@ function scrollAnimation() {
       "-=21.8"
     );
 
-  ScrollTrigger.matchMedia({
-    "(min-width: 1100px)": () => {
-      timeline
-        .to(
-          ".contact-info",
-          {
-            x: "13vw",
-            ease: "rough.in",
-            duration: 4.5,
-          },
-          "-=22.72"
-        )
-        .to(
-          ".form-wrapper",
-          {
-            x: "-13vw",
-            duration: 4.5,
-            ease: "rough.in",
-          },
-          "-=22.72"
-        )
-        .to(
-          ".border1, .border2",
-          {
-            autoAlpha: 1,
-            duration: 3,
-          },
-          "-=20"
-        );
-    },
-  });
+//   ScrollTrigger.matchMedia({
+//     "(min-width: 1100px)": () => {
+//       timeline
+//         .to(
+//           ".contact-info",
+//           {
+//             x: "13vw",
+//             ease: "rough.in",
+//             duration: 4.5,
+//           },
+//           "-=22.72"
+//         )
+//         .to(
+//           ".form-wrapper",
+//           {
+//             x: "-13vw",
+//             duration: 4.5,
+//             ease: "rough.in",
+//           },
+//           "-=22.72"
+//         )
+//         .to(
+//           ".border1, .border2",
+//           {
+//             autoAlpha: 1,
+//             duration: 3,
+//           },
+//           "-=20"
+//         );
+//     },
+//   });
 }
 
 scrollAnimation();

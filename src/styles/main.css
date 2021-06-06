@@ -751,14 +751,6 @@ a:active {
   }
 }
 
-.plan {
-  position: relative;
-  z-index: 1400;
-  right: 10%;
-  width: 25%;
-  transform: rotate(-135deg);
-}
-
 .about-div {
   display: flex;
   width: 95%;
@@ -820,6 +812,7 @@ a:active {
   font-family: 'Open Sans', sans-serif;
   
 }
+
 
 .divider {
   border-bottom: 2px solid #4b3753;
@@ -920,8 +913,8 @@ a:active {
 }
 
 .smoke {
-  width: 60vw;
-  height: 70%;
+  width: 30vw;
+  height: 60%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -950,7 +943,7 @@ a:active {
   position: absolute;
   margin-top: 5%;
   z-index: 300;
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   font-weight: 550;
   color: white;
   text-align: center;
@@ -965,10 +958,11 @@ a:active {
 
 .form-wrapper {
   position: relative;
+  right: 1%;
   z-index: 500;
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 30%;
   margin: 0;
   margin-bottom: 3%;
 }
@@ -1149,9 +1143,10 @@ label {
 
 .contact-info {
   position: relative;
+  left: 2%;
   z-index: 550;
   color: chartreuse;
-  width: 35%;
+  width: 30vw;
   height: 50%;
   display: flex;
   flex-direction: column;

@@ -57,7 +57,7 @@ const scene = new THREE.Scene();
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 13000;
+const particlesCount = 11000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
@@ -72,7 +72,7 @@ particlesGeometry.setAttribute(
 );
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.006,
+  size: 0.032,
   map: zero,
   transparent: true,
   color: "#ffffff",
@@ -80,7 +80,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 
 const particlesMaterial1 = new THREE.PointsMaterial({
-  size: 0.006,
+  size: 0.032,
   map: one,
   transparent: true,
   color: "#ffffff",
@@ -99,7 +99,7 @@ scene.add(particlesMesh, particlesMesh1);
 const pointLight3 = new THREE.AmbientLight(0x68228b);
 
 pointLight3.position.set(-10, 5, 8);
-pointLight3.intensity = 2;
+pointLight3.intensity = 1.8;
 
 scene.add(pointLight3);
 
@@ -145,7 +145,7 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
 controls.enableZoom = false;
-controls.autoRotateSpeed = 0.17;
+controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
 
 controls.update;
@@ -170,7 +170,7 @@ let mouseY = -1;
 
 function animatedParticles(event) {
   mouseY = event.clientY;
-  // mouseX = event.clientX;
+  mouseX = event.clientX;
 }
 
 /**
@@ -182,8 +182,8 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  particlesMesh.rotation.x = mouseX * (elapsedTime * 0.000025);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * 0.000024);
+  particlesMesh.rotation.x = mouseX * (Math.PI * 0.000025);
+  particlesMesh.rotation.y = mouseY * (elapsedTime * 0.000026);
 
   // Update Orbital Controls
   controls.update();

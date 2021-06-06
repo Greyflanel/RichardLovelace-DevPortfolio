@@ -72,7 +72,7 @@ particlesGeometry.setAttribute(
 );
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.032,
+  size: 0.012,
   map: zero,
   transparent: true,
   color: "#ffffff",
@@ -80,7 +80,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 
 const particlesMaterial1 = new THREE.PointsMaterial({
-  size: 0.032,
+  size: 0.012,
   map: one,
   transparent: true,
   color: "#ffffff",

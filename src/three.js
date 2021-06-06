@@ -77,12 +77,12 @@ const scene = new THREE.Scene();
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 10000;
+const particlesCount = 9000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-  posArray[i] = (Math.random() - 0.5) * 6;
+  posArray[i] = (Math.random() - 0.5) * 5.5;
 }
 // // Materials
 
@@ -94,8 +94,8 @@ particlesGeometry.setAttribute(
 
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.015,
-  map: (zero),
+  size: 0.014,
+  map: zero,
   transparent: true,
   color: "#ffffff",
   blending: THREE.AdditiveBlending,
@@ -206,7 +206,7 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   particlesMesh.rotation.x = mouseX * (Math.PI * 0.000025);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * 0.000026);
+  particlesMesh.rotation.y = mouseY * (Math.PI * 0.000046);
 
   // Update Orbital Controls
   controls.update();

@@ -11,7 +11,7 @@ import Css from "./static/css-logo.webp";
 import React from "./static/react-logo.webp";
 import Gsap from "./static/gsap-logo.webp";
 import NodeJs from "./static/node-logo.webp";
-import Js from "./static/js-logo.webp";
+import Js from "./static/js-logo.png";
 import Postgres from "./static/postgres-logo.webp";
 import Knex from "./static/knex-icon.webp";
 import Python from "./static/python-logo.webp";

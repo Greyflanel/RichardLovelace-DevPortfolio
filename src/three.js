@@ -38,10 +38,10 @@ gltf.load(
     moon.rotation.y = -0.1;
     moon.rotation.x = -0.1;
 
-    moon.position.y = -0.03;
+    moon.position.y = -0.06;
     moon.position.x = -0.12;
 
-    gltf.scene.scale.set(1.14, 1.14, 1.14);
+    gltf.scene.scale.set(1.12, 1.12, 1.12);
 
     scene.add(gltf.scene);
   },
@@ -82,7 +82,7 @@ const particlesCount = 7000;
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-  posArray[i] = (Math.random() - 0.5) * 7;
+  posArray[i] = (Math.random() - 0.5) * 6;
 }
 // // Materials
 
@@ -94,7 +94,7 @@ particlesGeometry.setAttribute(
 
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.012,
+  size: 0.01,
   sizeAttenuation: true,
   map: zero,
   transparent: true,
@@ -103,7 +103,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 
 const particlesMaterial1 = new THREE.PointsMaterial({
-  size: 0.012,
+  size: 0.01,
   map: one,
   transparent: true,
   color: "#ffffff",
@@ -122,7 +122,7 @@ scene.add(particlesMesh, particlesMesh1);
 const pointLight3 = new THREE.AmbientLight(0x68228B	);
 
 pointLight3.position.set(-10, 5, 8);
-pointLight3.intensity = 1.8;
+pointLight3.intensity = 1.7;
 
 scene.add(pointLight3);
 

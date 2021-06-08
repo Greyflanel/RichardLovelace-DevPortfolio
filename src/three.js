@@ -76,19 +76,29 @@ const scene = new THREE.Scene();
 
 
 const particlesGeometry = new THREE.BufferGeometry();
+const particlesGeometry1 = new THREE.BufferGeometry();
 
-const particlesCount = 7000;
+const particlesCount = 5000;
+const particlesCount1 = 7000;
 
 const posArray = new Float32Array(particlesCount * 3);
+const posArray1 = new Float32Array(particlesCount1 * 6);
 
 for (let i = 0; i < particlesCount * 3; i++) {
   posArray[i] = (Math.random() - 0.5) * 6;
+}
+for (let j = 0; j < particlesCount1 * 3; j++) {
+  posArray1[j] = (Math.random() - 0.9) * 6;
 }
 // // Materials
 
 particlesGeometry.setAttribute(
   "position",
   new THREE.BufferAttribute(posArray, 3)
+);
+particlesGeometry1.setAttribute(
+  "position",
+  new THREE.BufferAttribute(posArray1, 4)
 );
 
 
@@ -113,7 +123,7 @@ const particlesMaterial1 = new THREE.PointsMaterial({
 // // Mesh
 
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-const particlesMesh1 = new THREE.Points(particlesGeometry, particlesMaterial1);
+const particlesMesh1 = new THREE.Points(particlesGeometry1, particlesMaterial1);
 scene.add(particlesMesh, particlesMesh1);
 
 // 3D Models

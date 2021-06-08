@@ -316,7 +316,7 @@ a:active {
   top: 12%;
   left: 5%;
   z-index: 500;
- color: whitesmoke;
+ color: rgb(173, 172, 172);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   /* text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke,
  0 0 3.4px #e0dede; */

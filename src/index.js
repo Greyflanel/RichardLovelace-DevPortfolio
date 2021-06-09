@@ -20,7 +20,7 @@ import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
 import Github3 from "./static/github3.svg";
 import { _numWithUnitExp } from "gsap/gsap-core";
-import { NoToneMapping } from "three";
+
 
 
 
@@ -91,10 +91,10 @@ window.onload = function () {
       )
       .to(letters, {
         delay: 0.2,
-        color: "lightgrey",
+        
         filter: "brightness(90%)",
         duration: 4,
-        textShadow: "none",
+        
       });
   }
 

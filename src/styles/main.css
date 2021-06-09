@@ -221,7 +221,7 @@ a:active {
   text-align: center;
   z-index: 12;
   visibility: hidden;
-  color: black;
+  
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   
   text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke,
@@ -237,6 +237,7 @@ a:active {
 .content-name {
   margin: 0;
   font-size: 5.5rem;
+  
 }
 
 @media (max-width: 1280px) {
@@ -318,6 +319,7 @@ a:active {
     font-size: 1.8rem;
   }
 }
+
 
 .love-of-code {
   position: absolute;
@@ -1386,7 +1388,6 @@ label {
   top: 45%;
   left: 42%;
   bottom: 0;
-  color: chartreuse;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -1430,7 +1431,10 @@ label {
 
 .contact-name h2 {
   font-size: 3rem;
-  
+  background: -webkit-linear-gradient(90deg, #eee, #683C7D 70%);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 1600px) {
@@ -1445,7 +1449,10 @@ h3,
 h4
 {
   font-size: 2rem;
-  
+  background: -webkit-linear-gradient(90deg, #eee, #683C7D 70%);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 1600px) {

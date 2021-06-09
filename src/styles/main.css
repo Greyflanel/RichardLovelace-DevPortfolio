@@ -217,13 +217,21 @@ a:active {
   position: absolute;
   bottom: 10%;
   right: 10%;
+  display: block;
   text-align: center;
   z-index: 12;
   visibility: hidden;
   color: black;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  
   text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke,
  0 0 3.4px #e0dede;
+}
+
+@media (max-width: 600px) {
+  .content {
+    right: 15%;
+  }
 }
 
 .content-name {
@@ -316,18 +324,23 @@ a:active {
   top: 12%;
   left: 5%;
   z-index: 500;
- color: rgb(173, 172, 172);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke,
- 0 0 3.4px #e0dede; */
 }
 
 .love-of-code h2 {
   font-size: 3rem;
+   background: -webkit-linear-gradient(90deg, #eee, #683C7D 70%);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .love-of-code h3 {
   font-size: 2.5rem;
+  background: -webkit-linear-gradient(90deg, #eee, #683C7D 70%);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .second-section-title {
@@ -744,6 +757,13 @@ a:active {
   }
 }
 
+@media (max-width: 1000px) {
+  .my-image {
+   display: none;
+   
+  }
+}
+
 #my-avatar {
   height: 40rem;
 }
@@ -917,7 +937,7 @@ a:active {
 
 .smoke {
   width: 30vw;
-  height: 60%;
+  height: 70%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -954,7 +974,7 @@ a:active {
 
 @media (max-width: 1680px) {
   .smoke-text {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     margin-top: 1%;
   }
 }
@@ -976,7 +996,7 @@ a:active {
 
 @media (max-width: 1680px) {
   .form-wrapper {
-    width: 65%;
+    width: 35%;
   }
 }
 
@@ -1183,7 +1203,7 @@ label {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .contact-info {
     width: 60%;
     height: 60%;
@@ -1360,3 +1380,79 @@ label {
     margin-top: 4%;
   }
 }
+
+.contact-name {
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  bottom: 0;
+  color: chartreuse;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  line-height: 4rem;
+}
+
+@media (max-width: 1500px) {
+  .contact-name {
+    top: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .contact-name {
+    position: relative;
+    visibility: visible;
+    left: -40%;
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 1000px) {
+  .contact-name {
+    position: relative;
+    visibility: visible;
+    left: -40%;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-name {
+    left: -40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-name {
+    left: -5%;
+    transform: rotate(0deg);
+  }
+}
+
+.contact-name h2 {
+  font-size: 3rem;
+  
+}
+
+@media (max-width: 1600px) {
+  .contact-name h2 {
+    font-size: 2rem;
+  }
+}
+
+
+.contact-name 
+h3, 
+h4
+{
+  font-size: 2rem;
+  
+}
+
+@media (max-width: 1600px) {
+  .contact-name 
+  h3,
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+

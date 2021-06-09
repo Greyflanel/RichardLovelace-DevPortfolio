@@ -11,7 +11,6 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-// import * as dat from "dat.gui";
 
 // Loading
 
@@ -59,13 +58,6 @@ gltf.load(
   }
 );
 
-
-
-// const normalTexture = textureLoader.load("");
-
-// Debug
-//  const gui = new dat.GUI();
-
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
 
@@ -78,17 +70,17 @@ const scene = new THREE.Scene();
 const particlesGeometry = new THREE.BufferGeometry();
 const particlesGeometry1 = new THREE.BufferGeometry();
 
-const particlesCount = 5000;
+const particlesCount = 7000;
 const particlesCount1 = 7000;
 
 const posArray = new Float32Array(particlesCount * 3);
-const posArray1 = new Float32Array(particlesCount1 * 6);
+const posArray1 = new Float32Array(particlesCount1 * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
   posArray[i] = (Math.random() - 0.5) * 6;
 }
 for (let j = 0; j < particlesCount1 * 3; j++) {
-  posArray1[j] = (Math.random() - 0.9) * 6;
+  posArray1[j] = (Math.random() - 0.5) * 6;
 }
 // // Materials
 
@@ -114,6 +106,7 @@ const particlesMaterial = new THREE.PointsMaterial({
 
 const particlesMaterial1 = new THREE.PointsMaterial({
   size: 0.01,
+  sizeAttenuation: true,
   map: one,
   transparent: true,
   color: "#ffffff",
@@ -179,7 +172,7 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
 controls.enableZoom = false;
-controls.autoRotateSpeed = 0.15;
+controls.autoRotateSpeed = 0.16;
 controls.enablePan = false;
 
 controls.update;
@@ -216,7 +209,7 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  particlesMesh.rotation.x = mouseX * (Math.PI * 0.000025);
+  particlesMesh.rotation.x = mouseX * (Math.PI * 0.000045);
   particlesMesh.rotation.y = mouseY * (Math.PI * 0.000046);
 
   // Update Orbital Controls

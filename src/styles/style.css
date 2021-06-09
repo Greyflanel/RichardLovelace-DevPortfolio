@@ -57,6 +57,12 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .fourth-section-container {
+    height: 100%;
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px) {
   .fourth-section-container {
     height: 100%;

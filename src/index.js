@@ -19,6 +19,8 @@ import My_Avatar from "./static/me.webp";
 import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
 import Github3 from "./static/github3.svg";
+import { _numWithUnitExp } from "gsap/gsap-core";
+import { NoToneMapping } from "three";
 
 
 
@@ -70,7 +72,7 @@ window.onload = function () {
         {
           duration: 2,
           opacity: 1,
-          filter: "brightness(105%)",
+          filter: "brightness(165%)",
         },
         "+=0.1"
       )
@@ -89,9 +91,10 @@ window.onload = function () {
       )
       .to(letters, {
         delay: 0.2,
-        
-        filter: "brightness(100%)",
+        color: "lightgrey",
+        filter: "brightness(90%)",
         duration: 4,
+        textShadow: "none",
       });
   }
 

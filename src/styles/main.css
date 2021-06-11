@@ -214,18 +214,27 @@ a:active {
 }
 
 .grabbable {
-    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: move; 
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
 }
 
- /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+
 .grabbable:active {
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
 }
+
+/* .hi span {
+  position: absolute;
+  z-index: 20;
+  top: 62%;
+  right: 20%;
+  font-size: 4rem;
+  color: whitesmoke;
+} */
 
 .content {
   position: absolute;
@@ -244,7 +253,7 @@ a:active {
 
 @media (max-width: 600px) {
   .content {
-    right: 15%;
+    right: 13%;
   }
 }
 
@@ -288,13 +297,13 @@ a:active {
 
 @media (max-width: 400px) {
   .content-name {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
   }
 }
 
 @media (max-width: 300px) {
   .content-name {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -330,7 +339,7 @@ a:active {
 
 @media (max-width: 400px) {
   .content-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 

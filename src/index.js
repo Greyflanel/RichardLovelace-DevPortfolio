@@ -2,7 +2,7 @@ import "./nav";
 import "./gsap";
 import gsap from "gsap";
 import BlackClover from "./static/black-clover-pub-video.mp4";
-import MyPortfolioVideo from "./static/richardlovelace-portfolio.mp4";
+import MyPortfolioVideo from "./static/portfolio-video.mp4";
 import Github from "./static/github.svg";
 import Github2 from "./static/github.svg";
 import NewLogo from "./static/new-logo-color.webp";
@@ -11,7 +11,7 @@ import Css from "./static/css-logo.webp";
 import React from "./static/react-logo.webp";
 import Gsap from "./static/gsap-logo.webp";
 import NodeJs from "./static/node-logo.webp";
-import Js from "./static/js-logo.png";
+import Js from "./static/js-logo.webp";
 import Postgres from "./static/postgres-logo.webp";
 import Knex from "./static/knex-icon.webp";
 import Python from "./static/python-logo.webp";
@@ -19,7 +19,7 @@ import My_Avatar from "./static/me.webp";
 import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
 import Github3 from "./static/github3.svg";
-import { _numWithUnitExp } from "gsap/gsap-core";
+
 
 
 

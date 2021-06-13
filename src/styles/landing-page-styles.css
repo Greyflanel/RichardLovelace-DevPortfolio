@@ -16,7 +16,7 @@
 .content {
   position: absolute;
   bottom: 8%;
-  right: 8%;
+  right: 7%;
   display: block;
   text-align: center;
   z-index: 12;
@@ -133,6 +133,7 @@
 @media (max-width: 900px) {
   .love-of-code {
     background-color: transparent;
+    top: 12%;
   }
 }
 

@@ -1,5 +1,7 @@
 import "./nav";
 import "./gsap";
+import "./styles/main.css";
+import "./styles/style.css";
 import gsap from "gsap";
 import BlackClover from "./static/black-clover-pub-video.mp4";
 import MyPortfolioVideo from "./static/portfolio-video.mp4";
@@ -91,10 +93,8 @@ window.onload = function () {
       )
       .to(letters, {
         delay: 0.2,
-        
-        filter: "brightness(90%)",
-        duration: 4,
-        
+        filter: "brightness(165%)",
+        duration: 3,
       });
   }
 

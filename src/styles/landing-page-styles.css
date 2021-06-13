@@ -29,7 +29,7 @@
 
 @media (max-width: 600px) {
   .content {
-    right: 12%;
+    right: 9.5%;
   }
 }
 
@@ -139,7 +139,7 @@
 
 .love-of-code h2 {
   font-size: 3rem;
-   background: -webkit-linear-gradient(90deg, #eee, #683C7D 80%);
+   background: -webkit-linear-gradient(90deg, #eee, #4c285e 80%);
    background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -147,7 +147,7 @@
 
 .love-of-code h3 {
   font-size: 2.5rem;
-  background: -webkit-linear-gradient(90deg, #eee, #683C7D 70%);
+  background: -webkit-linear-gradient(90deg, #eee, #4c285e 70%);
    background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

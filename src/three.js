@@ -120,7 +120,7 @@ scene.add(particlesMesh, particlesMesh1);
 // 3D Models
 
 // Light 3
-const pointLight3 = new THREE.AmbientLight(0x551a8b);
+const pointLight3 = new THREE.AmbientLight(0x4c285e);
 
 pointLight3.position.set(-10, 5, 8);
 pointLight3.intensity = 1.9;

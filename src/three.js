@@ -5,12 +5,11 @@ import "./static/moon3.webp";
 import myMoon from "./static/moon.gltf";
 import myZero from "./static/zero.bak.webp";
 import myOne from "./static/one.bak.webp";
-import "./styles/landing-page-styles.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-
+import "./styles/landing-page-styles.css";
 // Loading
 
 const textureLoader = new THREE.TextureLoader();

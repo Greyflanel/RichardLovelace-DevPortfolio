@@ -24,8 +24,6 @@ import Github3 from "./static/github3.svg";
 
 
 
-
-
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
   window.matchMedia("(min-width: 1000px)"),

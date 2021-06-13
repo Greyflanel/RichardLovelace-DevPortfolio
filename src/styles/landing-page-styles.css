@@ -16,7 +16,7 @@
 .content {
   position: absolute;
   bottom: 8%;
-  right: 10%;
+  right: 8%;
   display: block;
   text-align: center;
   z-index: 12;
@@ -29,7 +29,7 @@
 
 @media (max-width: 600px) {
   .content {
-    right: 13%;
+    right: 12%;
   }
 }
 
@@ -128,6 +128,12 @@
   left: 5%;
   z-index: 500;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 900px) {
+  .love-of-code {
+    background-color: transparent;
+  }
 }
 
 .love-of-code h2 {

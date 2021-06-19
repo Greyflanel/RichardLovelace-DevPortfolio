@@ -25,6 +25,7 @@ dracoLoader.setDecoderPath(
 const gltf = new GLTFLoader();
 gltf.setDRACOLoader(dracoLoader);
 
+const mql = window.matchMedia("(max-width: 600px)");
 let moon = myMoon;
 
 gltf.load(
@@ -39,7 +40,9 @@ gltf.load(
     moon.position.x = -0.12;
 
     gltf.scene.scale.set(1.12, 1.12, 1.12);
-
+    if (mql.matches) {
+      gltf.scene.scale.set(0.85, 0.85, 0.85);
+    }
     scene.add(gltf.scene);
   },
 
@@ -171,7 +174,9 @@ controls.autoRotate = true;
 controls.enableZoom = false;
 controls.autoRotateSpeed = 0.16;
 controls.enablePan = false;
-
+if (mql.matches) {
+  controls.enabled = false;
+}
 controls.update;
 
 /**

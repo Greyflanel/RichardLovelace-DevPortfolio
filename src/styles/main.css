@@ -1317,3 +1317,18 @@ h4
   }
 }
 
+@media (max-width: 600px) {
+  .contact-name  {
+    margin: 6% 0;
+    margin-left: 14%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-name 
+  h2,
+  h3,
+  h4 {
+    line-height: 2.4rem;
+  }
+}

@@ -43,7 +43,9 @@ window.onload = function () {
     tl3
       .set(
         ".content",
-        { xPercent: 10, filter: "brightness(105%)", opacity: 1 },
+        { xPercent: 10, filter: "brightness(105%)", opacity: 1,
+      
+      },
         "-=1"
       )
       .to(

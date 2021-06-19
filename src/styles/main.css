@@ -80,7 +80,7 @@ section {
   position: fixed;
   z-index: 610;
   right: clamp(2%, 35px, 6%);
-  top: 35px;
+  top: clamp(2%, 30px, 6%);
   cursor: pointer;
   transition: all 0.5s ease-out;
 }

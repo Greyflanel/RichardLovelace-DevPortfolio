@@ -117,10 +117,11 @@
   background: -webkit-linear-gradient(45deg, #eee 30%, #4c285e 100%, #eee 30%);
   padding:  1.5%;
   border-radius: 1rem;
-  top: 0.5%;
-  left: 0.5%;
+  top: 8%;
+  left: 4%;
   z-index: 500;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  transform: rotate(-15deg);
 }
 
 @media (max-width: 600px) {

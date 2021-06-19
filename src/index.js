@@ -37,6 +37,7 @@ window.onload = function () {
     if (mql.matches) {
       tl3.set(letters, {
         color: "#696970",
+        textShadow: "none"
       });
     }
     tl3

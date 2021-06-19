@@ -3,8 +3,6 @@ import "./gsap";
 import "./styles/main.css";
 import "./styles/style.css";
 import gsap from "gsap";
-import BlackClover from "./static/black-clover-pub-video.mp4";
-import MyPortfolioVideo from "./static/portfolio-video.mp4";
 import Github from "./static/github.svg";
 import Github2 from "./static/github.svg";
 import NewLogo from "./static/new-logo-color.webp";
@@ -21,34 +19,26 @@ import My_Avatar from "./static/me.webp";
 import SmokeVid from "./static/grape-smoke.mp4";
 import LinkedIn from "./static/linkedin.svg";
 import Github3 from "./static/github3.svg";
+import BlackClover from "./static/black-clover-pub-video.mp4";
+import MyPortfolioVideo from "./static/portfolio-video.mp4";
 
-
-
-var mqls = [
-  window.matchMedia("(min-width: 1281px)"),
-  window.matchMedia("(min-width: 1000px)"),
-  window.matchMedia("(min-width: 800px)"),
-  window.matchMedia("(min-width: 600px)"),
-  window.matchMedia("(min-width: 400px)"),
-  window.matchMedia("(min-width: 360px)"),
-  window.matchMedia("(min-width: 280px)"),
-];
-// We listen to the resize event
 window.addEventListener("resize", () => {
-  // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
-
-
 window.onload = function () {
-  function mediaqueryresponse(mql) {
+  function titleAnimation() {
     let tl2 = gsap.timeline({ repeat: 0, delay: 0.5 });
     let tl3 = gsap.timeline({ repeat: 0 });
-    
     let letters = document.querySelectorAll(".letter");
+    let mql = window.matchMedia("(max-width: 600px)");
 
+    if (mql.matches) {
+      tl3.set(letters, {
+        color: "#696970",
+      });
+    }
     tl3
       .set(
         ".content",
@@ -93,30 +83,35 @@ window.onload = function () {
         delay: 0.2,
         filter: "brightness(165%)",
         duration: 3,
-      });
+      })
+      .to(
+        letters,
+        {
+          color: "#696970",
+          textShadow: "none",
+        },
+        "-=3.3"
+      );
   }
 
-document.getElementById("black-clover-vid").src = BlackClover;
-document.getElementById("portfolio-vid").src = MyPortfolioVideo;
-document.getElementById("github").src = Github;
-document.getElementById("github2").src = Github2;
-document.getElementById("dev-logo").src = NewLogo;
-document.getElementById("html5-logo").src = Html;
-document.getElementById("css-logo").src = Css;
-document.getElementById("react-logo").src = React;
-document.getElementById("gsap-logo").src = Gsap;
-document.getElementById("node-logo").src = NodeJs;
-document.getElementById("js-logo").src = Js;
-document.getElementById("postgres-logo").src = Postgres;
-document.getElementById("knex-logo").src = Knex;
-document.getElementById("python-logo").src = Python;
-document.getElementById("my-avatar").src = My_Avatar;
-document.getElementById("smokey").src = SmokeVid;
-document.getElementById("linked-in").src = LinkedIn;
-document.getElementById("links").src = Github3;
+  document.getElementById("black-clover-vid").src = BlackClover;
+  document.getElementById("portfolio-vid").src = MyPortfolioVideo;
+  document.getElementById("github").src = Github;
+  document.getElementById("github2").src = Github2;
+  document.getElementById("dev-logo").src = NewLogo;
+  document.getElementById("html5-logo").src = Html;
+  document.getElementById("css-logo").src = Css;
+  document.getElementById("react-logo").src = React;
+  document.getElementById("gsap-logo").src = Gsap;
+  document.getElementById("node-logo").src = NodeJs;
+  document.getElementById("js-logo").src = Js;
+  document.getElementById("postgres-logo").src = Postgres;
+  document.getElementById("knex-logo").src = Knex;
+  document.getElementById("python-logo").src = Python;
+  document.getElementById("my-avatar").src = My_Avatar;
+  document.getElementById("smokey").src = SmokeVid;
+  document.getElementById("linked-in").src = LinkedIn;
+  document.getElementById("links").src = Github3;
 
-  for (let i = 0; i < mqls.length; i++) {
-    mediaqueryresponse(mqls[i]);
-    mqls[i].addEventListener(mediaqueryresponse, {});
-  }
+  titleAnimation();
 };

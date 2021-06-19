@@ -4,15 +4,6 @@
     cursor: -webkit-grabbing;
 }
 
-/* .hi span {
-  position: absolute;
-  z-index: 20;
-  top: 62%;
-  right: 20%;
-  font-size: 4rem;
-  color: whitesmoke;
-} */
-
 .content {
   position: absolute;
   bottom: 8%;
@@ -35,51 +26,52 @@
 
 .content-name {
   margin: 0;
-  font-size: 5.5rem;
+  font-size: 4.2rem;
   
 }
 
 @media (max-width: 1280px) {
   .content-name {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-top: -15%;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .content-name {
-    font-size: 4.3rem;
+    font-size: 4rem;
     margin-top: 5%;
+    
   }
 }
 
 @media (max-width: 700px) {
   .content-name {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .content-name {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
   }
 }
 
 @media (max-width: 500px) {
   .content-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
 @media (max-width: 400px) {
   .content-name {
-    font-size: 2.6rem;
+    font-size: 2.1rem;
   }
 }
 
 @media (max-width: 300px) {
   .content-name {
-    font-size: 2.55rem;
+    font-size: 1.85rem;
   }
 }
 
@@ -122,35 +114,53 @@
 
 .love-of-code {
   position: absolute;
-  background-color: black;
-  padding: 1%;
-  top: 8%;
-  left: 5%;
+  background: -webkit-linear-gradient(45deg, #eee 30%, #4c285e 100%, #eee 30%);
+  padding:  1.5%;
+  border-radius: 1rem;
+  top: 0.5%;
+  left: 0.5%;
   z-index: 500;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .love-of-code {
-    background-color: transparent;
-    top: 12%;
+    padding: 0 1%;
+    top: 10%;
   }
 }
 
 .love-of-code h2 {
   font-size: 3rem;
-   background: -webkit-linear-gradient(90deg, #eee, #4c285e 80%);
-   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: -2.5%;
+  text-align: center;
 }
 
 .love-of-code h3 {
-  font-size: 2.5rem;
-  background: -webkit-linear-gradient(90deg, #eee, #4c285e 70%);
-   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+
+
+.love-of-code .hello {
+  font-size: 2rem;
+  text-decoration: underline #4c285e;
+  text-underline-offset: 2px;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .hello {
+    display: none;
+  }
+}
+
+.name-title {
+  
+  margin: 1% 0;
+  border-radius: 0.4rem;
 }
 
 .developer-logo {
@@ -166,5 +176,5 @@
 }
 
 .dev-logo-img {
-  height: 4rem;
+  height: 3.5rem;
 }

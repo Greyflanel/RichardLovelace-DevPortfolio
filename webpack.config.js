@@ -8,7 +8,7 @@ module.exports = {
     three: "./src/three.js",
     index: "./src/index.js",
   },
-  devtool: "inline-source-map",
+  
   devServer: {
     contentBase: "./dist",
   },

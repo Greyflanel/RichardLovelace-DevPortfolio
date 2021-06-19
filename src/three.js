@@ -35,7 +35,7 @@ gltf.load(
     moon.rotation.y = -0.1;
     moon.rotation.x = -0.1;
 
-    moon.position.y = -0.06;
+    moon.position.y = -0.1;
     moon.position.x = -0.12;
 
     gltf.scene.scale.set(1.12, 1.12, 1.12);
@@ -76,10 +76,9 @@ const posArray1 = new Float32Array(particlesCount1 * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
   posArray[i] = (Math.random() - 0.5) * 6;
+  posArray1[i] = (Math.random() - 0.5) * 6;
 }
-for (let j = 0; j < particlesCount1 * 3; j++) {
-  posArray1[j] = (Math.random() - 0.5) * 6;
-}
+
 // // Materials
 
 particlesGeometry.setAttribute(
@@ -221,75 +220,3 @@ const tick = () => {
 };
 
 tick();
-
-
-// tl.set(".container", {
-  //   visibility: "visible",
-  //   autoAlpha: 1,
-
-  //   xPercent: -50,
-  //   yPercent: -50,
-  //   x: "35%",
-  //   y: "0%",
-
-  // });
-
-  // if (mqls[0].matches) {
-
-  //   tl.to(".container", {
-
-  //     x: "+=5%",
-  //     y: "-=25%",
-  //     duration: 20,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=45%",
-  //       y: "+=30%",
-  //       duration: 45,
-  //       ease: "linear",
-  //       delay: 9999999999999999999999999999,
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "+=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=45%",
-  //       y: "-=20%",
-  //       duration: 45,
-  //       ease: "linear",
-  //     });
-  // } else if (mqls[1].matches) {
-  //   tl.set(".container", {
-  //     x: "+=10%",
-  //     delay: 0
-  //   });
-  //   tl.to(".container", {
-  //     x: "+=38%",
-  //     y: "-=13%",
-  //     duration: 30,
-  //     ease: "linear",
-  //   })
-  //     .to(".container", {
-  //       x: "+=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "+=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     })
-  //     .to(".container", {
-  //       x: "-=38%",
-  //       y: "-=13%",
-  //       duration: 30,
-  //       ease: "linear",
-  //     });
-
-  // }

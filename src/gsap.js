@@ -8,12 +8,6 @@ function playVideo(el) {
   console.log("playing video");
 }
 
-// function pauseVideo(el) {
-//   let vid = document.getElementById(el);
-//   vid.pause();
-//   console.log("pausing video");
-// };
-
 let timeline = gsap.timeline({
   repeat: 0,
   ease: "power1.inOut",
@@ -110,38 +104,6 @@ function scrollAnimation() {
       autoAlpha: 1,
       duration: 1.5,
     }, "-=21");
-
-//   ScrollTrigger.matchMedia({
-//     "(min-width: 1100px)": () => {
-//       timeline
-//         .to(
-//           ".contact-info",
-//           {
-//             x: "13vw",
-//             ease: "rough.in",
-//             duration: 4.5,
-//           },
-//           "-=22.72"
-//         )
-//         .to(
-//           ".form-wrapper",
-//           {
-//             x: "-13vw",
-//             duration: 4.5,
-//             ease: "rough.in",
-//           },
-//           "-=22.72"
-//         )
-//         .to(
-//           ".border1, .border2",
-//           {
-//             autoAlpha: 1,
-//             duration: 3,
-//           },
-//           "-=20"
-//         );
-//     },
-//   });
 }
 
 scrollAnimation();

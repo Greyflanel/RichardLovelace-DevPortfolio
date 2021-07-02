@@ -41,6 +41,7 @@ gltf.load(
 
     gltf.scene.scale.set(1.12, 1.12, 1.12);
     if (mql.matches) {
+      moon.position.x = 0;
       gltf.scene.scale.set(0.85, 0.85, 0.85);
     }
     scene.add(gltf.scene);
@@ -125,7 +126,7 @@ scene.add(particlesMesh, particlesMesh1);
 const pointLight3 = new THREE.AmbientLight(0x4c285e);
 
 pointLight3.position.set(-10, 5, 8);
-pointLight3.intensity = 1.9;
+pointLight3.intensity = 2.2;
 
 scene.add(pointLight3);
 

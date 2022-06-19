@@ -41,7 +41,7 @@ section {
 }
 
 .fullscreen-nav a {
-  color: #673a7c;
+  color: #245620;
   text-shadow: 0.1px 0.6px 1px #3c2841;
   text-decoration: none;
   margin: 0 2.5%;
@@ -89,7 +89,7 @@ section {
   width: 39px;
   height: 6px;
   margin: 0 0 7px 0;
-  border: 0.5px solid #550055;
+  border: 0.5px solid #245620;
   box-shadow: 0 0 1px white, 0 0 2px white, 0 0 4px white, 0 4px 5px #3a043a,
  0 4px 5px #3a043a;
   background-color: rgba(20, 5, 18, 0.507);
@@ -141,7 +141,7 @@ section {
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #472e52;
+  background: #245620;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -223,7 +223,7 @@ a:active {
   margin-top: -9%;
   margin-bottom: 1%;
   box-shadow: 5px 10px 30px 8px #46324648;
-  background-color: #673a7c;
+  background-color: #245620;
 }
 
 @media (max-width: 1280px) {

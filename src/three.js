@@ -101,7 +101,7 @@ const particlesMaterial = new THREE.PointsMaterial({
   sizeAttenuation: true,
   map: zero,
   transparent: true,
-  color: "#ffffff",
+  color: "chartreuse",
   blending: THREE.AdditiveBlending,
 });
 
@@ -110,7 +110,7 @@ const particlesMaterial1 = new THREE.PointsMaterial({
   sizeAttenuation: true,
   map: one,
   transparent: true,
-  color: "#ffffff",
+  color: "#1F51FF",
   blending: THREE.AdditiveBlending,
 });
 
@@ -123,10 +123,10 @@ scene.add(particlesMesh, particlesMesh1);
 // 3D Models
 
 // Light 3
-const pointLight3 = new THREE.AmbientLight(0x4c285e);
+const pointLight3 = new THREE.AmbientLight(0x245620);
 
 pointLight3.position.set(-10, 5, 8);
-pointLight3.intensity = 2.2;
+pointLight3.intensity = 5.2;
 
 scene.add(pointLight3);
 
